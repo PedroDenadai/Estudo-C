@@ -5,11 +5,15 @@ int main() {
     char opcao;
 
     while (!parar) {
-        char produto;
+        char produto[100];
         float preco, reajuste;
         int qtd;
 
-        printf("Preco do produto (Em R$): ");
+        printf("Nome do Produto: ");
+        scanf("%s", &produto);
+
+
+        printf("\nPreco do produto (Em R$): ");
         scanf("%f", &preco);
 
        printf("\nQuantidade de produtos: ");
