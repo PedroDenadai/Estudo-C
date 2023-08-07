@@ -26,6 +26,7 @@ int main() {
         float sDesconto = qtd * preco;
         float cDesconto = qtd * preco * desconto;
 
+       printf("\nNome do produto: %s \n", produto); 
         printf("\nTotal a pagar sem desconto: %.2f\n", sDesconto);
         printf("Total a pagar com desconto: %.2f\n", cDesconto);
 
