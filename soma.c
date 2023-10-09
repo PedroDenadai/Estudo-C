@@ -1,23 +1,29 @@
 #include <stdio.h>
-#include <math.h>
 
-// protótipo da função
-float equacao(int a, int b, int c);
+#define PI 3.14159
 
-int main() {
-   printf("%f\n", equacao(2, 8, -24));
-   return 0;
-}
+int main(void){
 
-// definição da função
-float equacao(int a, int b, int c) {
-   float delta = pow(b, 2) - 4 * a * c;
-   if (delta > 0) {
-    float x1 = (- b + (pow(delta, 1/2))) / 2 * a;
-    float x2 = (- b - (pow(delta, 1/2))) / 2 * a;
-    printf("%f \n", delta);
-    
-    return x1; 
+    float s = PI, m;
+    int n, i;
+    printf("Insira o valor de n (n >= 1): ");
+    scanf("%i", &n);
+
+    if (n < 1){
+        return 0;
+    }else {
+        for(i = 1; i <= n;i++){
+            if(i % 2 == 0){
+                s += PI / i;
+            }else{
+                m *= i / PI;
+            }
+        }
+
+
     }
-}
 
+    printf("%.2f\n", s);
+    printf("%.2f\n", m);
+    return 0;
+}
